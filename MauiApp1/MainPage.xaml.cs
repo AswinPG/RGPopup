@@ -1,6 +1,6 @@
 ﻿using RGPopup.Services;
 
-namespace RGPopupSample
+namespace MauiApp1
 {
     public partial class MainPage : ContentPage
     {
@@ -21,8 +21,8 @@ namespace RGPopupSample
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+            PopupNavigation.Instance.PushAsync(new NewPage1());
 
-            PopupNavigation.Instance.PushAsync(new PopupTest());
         }
     }
 }
