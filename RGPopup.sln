@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32519.111
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGPopup", "RGPopup\RGPopup.csproj", "{D9666A0E-B51A-4A23-940C-A4C7573A8406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGPopupSample", "RGPopupSample\RGPopupSample.csproj", "{5D781B7C-1A03-43FD-A630-28691A6BDABC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9666A0E-B51A-4A23-940C-A4C7573A8406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9666A0E-B51A-4A23-940C-A4C7573A8406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9666A0E-B51A-4A23-940C-A4C7573A8406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9666A0E-B51A-4A23-940C-A4C7573A8406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D781B7C-1A03-43FD-A630-28691A6BDABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D781B7C-1A03-43FD-A630-28691A6BDABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D781B7C-1A03-43FD-A630-28691A6BDABC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5D781B7C-1A03-43FD-A630-28691A6BDABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D781B7C-1A03-43FD-A630-28691A6BDABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D781B7C-1A03-43FD-A630-28691A6BDABC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E28B2B8-A9BE-43F8-A8EC-EE8AEFE91A63}
+	EndGlobalSection
+EndGlobal
