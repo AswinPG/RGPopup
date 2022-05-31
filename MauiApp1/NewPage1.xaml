@@ -2,19 +2,19 @@
 <p:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.NewPage1"
+             CloseWhenBackgroundIsClicked="True"
              xmlns:p="clr-namespace:RGPopup.Pages;assembly=RGPopup"
              xmlns:pa="clr-namespace:RGPopup.Animations;assembly=RGPopup"
              Title="NewPage1">
     <p:PopupPage.Animation>
-        <pa:MoveAnimation
-            DurationIn="400"
+        <pa:ScaleAnimation
+            DurationIn="2000"
             DurationOut="300"
             EasingIn="SinOut"
             EasingOut="SinIn"
-            HasBackgroundAnimation="True"
-            PositionIn="Center"
-            
-            PositionOut="Center" />
+            ScaleIn="0"
+            ScaleOut="2"
+            HasBackgroundAnimation="False" />
     </p:PopupPage.Animation>
     <ScrollView HorizontalOptions="Center" VerticalOptions="End" Padding="20" BackgroundColor="Black">
         <StackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="End" Padding="20,20,20,100" BackgroundColor="Green">

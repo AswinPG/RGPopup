@@ -1,4 +1,6 @@
-﻿namespace MauiApp1
+﻿using RGPopup.Hosting;
+
+namespace MauiApp1
 {
     public static class MauiProgram
     {
@@ -7,6 +9,7 @@
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigurePopups()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

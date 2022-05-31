@@ -21,7 +21,10 @@ public static class AppHostBuilderExtensions
 #if ANDROID
                 lifecycle.AddAndroid(d =>
                 {
-                    d.OnBackPressed(activity => RGPopup.Platforms.Android.PopupPlatform.SendBackPressed(activity.OnBackPressed));
+                    d.OnBackPressed(activity =>
+                    {
+                        return RGPopup.Platforms.Android.PopupPlatform.SendBackPressed(activity.OnBackPressed);
+                    });
                 });
 #endif
             })

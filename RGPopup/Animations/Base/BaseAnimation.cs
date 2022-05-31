@@ -34,6 +34,7 @@ namespace RGPopup.Animations.Base
 
         protected virtual int GetTopOffset(View content, Page page)
         {
+            //return 200;
             return (int)(content.Height + page.Height) / 2;
         }
 
