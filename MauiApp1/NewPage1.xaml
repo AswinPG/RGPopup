@@ -16,11 +16,43 @@
             
             PositionOut="Center" />
     </p:PopupPage.Animation>
-    <ScrollView HorizontalOptions="Center" VerticalOptions="End" Padding="20" BackgroundColor="Green">
+    <ScrollView HorizontalOptions="Center" VerticalOptions="End" Padding="20" BackgroundColor="Black">
         <StackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="End" Padding="20,20,20,100" BackgroundColor="Green">
             <Label Text="Welcome to .NET MAUI!"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
+            <Entry Placeholder="Blah"/>
             <Entry Placeholder="Blah"/>
 
         </StackLayout>

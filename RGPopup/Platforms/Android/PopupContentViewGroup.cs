@@ -115,9 +115,9 @@ namespace RGPopup.Platforms.Android
             (PopupHandler.VirtualView as PopupPage).SetValue(PopupPage.SystemPaddingProperty, systemPadding);
                 (PopupHandler.VirtualView as PopupPage).SetValue(PopupPage.KeyboardOffsetProperty, keyboardOffset);
 
-                if (changed)
+                //if (changed)
                     (PopupHandler.VirtualView as PopupPage).Layout(new Rect(Context.FromPixels(left), Context.FromPixels(top), Context.FromPixels(right), Context.FromPixels(bottom)));
-                else
+                //else
                     (PopupHandler.VirtualView as PopupPage).ForceLayout();
 
                 base.OnLayout(changed, left, top, right, bottom);
@@ -134,6 +134,7 @@ namespace RGPopup.Platforms.Android
         {
             var activity = Platform.CurrentActivity;
             var decoreView = activity?.Window?.DecorView;
+            activity?.Window?.SetSoftInputMode(SoftInput.AdjustResize);
             Context.HideKeyboard(decoreView);
             base.OnAttachedToWindow();
         }
@@ -221,7 +222,7 @@ namespace RGPopup.Platforms.Android
                 }
                 return baseValue;
             }
-            catch(Exception f)
+            catch (Exception f)
             {
 
             }

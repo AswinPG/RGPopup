@@ -19,7 +19,7 @@ using Android.Widget;
 
 namespace RGPopup.Pages;
 
-public class PopupPageHandler : PageHandler
+public class PopupPageHandler : ContentViewHandler
 {
     //private readonly RgGestureDetectorListener _gestureDetectorListener;
     //private readonly GestureDetector _gestureDetector;
@@ -28,10 +28,11 @@ public class PopupPageHandler : PageHandler
     private Microsoft.Maui.Graphics.Point _downPosition;
     public bool _disposed;
 
-    public PopupPageHandler()
+    public PopupPageHandler() : base(Mapper, CommandMapper)
     {
 
-        this.SetMauiContext(new MauiContext(MauiApplication.Current.Services, MauiApplication.Current.ApplicationContext));
+        this.SetMauiContext(MauiApplication.Current.Application.Windows[0].Handler.MauiContext);
+        //this.SetMauiContext(base.MauiContext);
         //_gestureDetectorListener = new RgGestureDetectorListener();
 
         //_gestureDetectorListener.Clicked += OnBackgroundClick;

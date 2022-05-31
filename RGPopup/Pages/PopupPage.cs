@@ -218,7 +218,6 @@ public class PopupPage : ContentPage
         {
             height -= KeyboardOffset;
         }
-
         base.LayoutChildren(x, y, width, height);
     }
 

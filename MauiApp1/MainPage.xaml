@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage">
 			 
-    <ScrollView>
+    <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="PaleVioletRed">
         <VerticalStackLayout 
             Spacing="25" 
             Padding="30,0" 
-            VerticalOptions="Center">
+            BackgroundColor="Orchid"
+            VerticalOptions="FillAndExpand">
 
             <Image
                 Source="dotnet_bot.png"
@@ -34,6 +35,29 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
+
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+            <Entry Text="bsf" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
 
         </VerticalStackLayout>
     </ScrollView>

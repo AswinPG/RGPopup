@@ -24,5 +24,11 @@ namespace MauiApp1
             PopupNavigation.Instance.PushAsync(new NewPage1());
 
         }
+
+        protected override void LayoutChildren(double x, double y, double width, double height)
+        {
+            base.LayoutChildren(x, y, width, height);
+        }
+
     }
 }
