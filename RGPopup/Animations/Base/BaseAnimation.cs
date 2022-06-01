@@ -50,7 +50,7 @@ namespace RGPopup.Animations.Base
         /// <param name="page">Page.</param>
         protected virtual void HidePage(Page page)
         {
-            page.IsVisible = false;
+            page.Opacity = 0;
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace RGPopup.Animations.Base
         protected virtual void ShowPage(Page page)
         {
             //Fix: #404
-            MainThread.BeginInvokeOnMainThread(() => page.IsVisible = true);
+            MainThread.BeginInvokeOnMainThread(() => page.Opacity = 1);
         }
     }
 }

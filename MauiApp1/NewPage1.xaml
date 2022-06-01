@@ -18,13 +18,14 @@
             HasBackgroundAnimation="False" />
     </p:PopupPage.Animation>-->
     <p:PopupPage.Animation>
-        <pa:ScaleAnimation
-            DurationIn="700"
-            EasingIn="BounceOut"
-            PositionIn="Bottom"
-            PositionOut="Center"
-            ScaleIn="1"
-            ScaleOut="0.7" />
+        <pa:MoveAnimation
+            DurationIn="200"
+            DurationOut="700"
+            
+            EasingIn="SinIn"
+            EasingOut="BounceOut"
+            PositionIn="Top"
+            PositionOut="Top"/>
     </p:PopupPage.Animation>
 
 
