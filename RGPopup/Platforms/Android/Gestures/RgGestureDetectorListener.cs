@@ -20,15 +20,15 @@ namespace RGPopup.Platforms.Android.Gestures
             return false;
         }
 
-        //This method is called //It works so... :)
-        public override bool OnDown(MotionEvent e)
-        {
-            if (e != null) Clicked?.Invoke(this, e);
-            return base.OnDown(e);
-        }
-        public override bool OnSingleTapConfirmed(MotionEvent e)
-        {
-            return base.OnSingleTapConfirmed(e);
-        }
+        ////This method is called //It works so... :)
+        //public override bool OnDown(MotionEvent e)
+        //{
+        //    if (e != null) Clicked?.Invoke(this, e);
+        //    return base.OnDown(e);
+        //}
+        //public override bool OnSingleTapConfirmed(MotionEvent e)
+        //{
+        //    return base.OnSingleTapConfirmed(e);
+        //}
     }
 }

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.NewPage1"
              BackgroundClicked="PopupPage_BackgroundClicked"
-             CloseWhenBackgroundIsClicked="True"
+             BackgroundInputTransparent="True"
+             CloseWhenBackgroundIsClicked="False"
              xmlns:p="clr-namespace:RGPopup.Pages;assembly=RGPopup"
              xmlns:pa="clr-namespace:RGPopup.Animations;assembly=RGPopup"
              Title="NewPage1">

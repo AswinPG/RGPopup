@@ -160,44 +160,59 @@ namespace RGPopup.Platforms.Android
                 RequestLayout();
         }
 
+        //public override bool DispatchTouchEvent(MotionEvent e)
+        //{
+        //    if (e.Action == MotionEventActions.Down)
+        //    {
+        //        _downTime = DateTime.UtcNow;
+        //        _downPosition = new Microsoft.Maui.Graphics.Point(e.RawX, e.RawY);
+        //    }
+        //    if (e.Action != MotionEventActions.Up)
+        //        return base.DispatchTouchEvent(e);
+
+        //    if (_disposed)
+        //        return false;
+
+        //    AndroidView.View? currentFocus1 = Platform.CurrentActivity?.CurrentFocus;
+
+        //    if (currentFocus1 is EditText)
+        //    {
+        //        AndroidView.View? currentFocus2 = Platform.CurrentActivity?.CurrentFocus;
+        //        if (currentFocus1 == currentFocus2 && _downPosition.Distance(new Microsoft.Maui.Graphics.Point(e.RawX, e.RawY)) <= Context.ToPixels(20.0) && !(DateTime.UtcNow - _downTime > TimeSpan.FromMilliseconds(200.0)))
+        //        {
+        //            var location = new int[2];
+        //            currentFocus1.GetLocationOnScreen(location);
+        //            var num1 = e.RawX + currentFocus1.Left - location[0];
+        //            var num2 = e.RawY + currentFocus1.Top - location[1];
+        //            if (!new Rectangle(currentFocus1.Left, currentFocus1.Top, currentFocus1.Width, currentFocus1.Height).Contains((int)num1, (int)num2))
+        //            {
+        //                Context.HideKeyboard(currentFocus1);
+        //                currentFocus1.ClearFocus();
+        //            }
+        //        }
+        //    }
+
+        //    if (_disposed)
+        //        return false;
+
+        //    var flag = base.DispatchTouchEvent(e);
+
+        //    return flag;
+        //}
+
+
         public override bool DispatchTouchEvent(MotionEvent e)
         {
-            if (e.Action == MotionEventActions.Down)
+            if (_disposed)
             {
-                _downTime = DateTime.UtcNow;
-                _downPosition = new Microsoft.Maui.Graphics.Point(e.RawX, e.RawY);
+                return false;
             }
-            if (e.Action != MotionEventActions.Up)
+            if ((PopupHandler.VirtualView as PopupPage).BackgroundInputTransparent)
+            {
                 return base.DispatchTouchEvent(e);
-
-            if (_disposed)
-                return false;
-
-            AndroidView.View? currentFocus1 = Platform.CurrentActivity?.CurrentFocus;
-
-            if (currentFocus1 is EditText)
-            {
-                AndroidView.View? currentFocus2 = Platform.CurrentActivity?.CurrentFocus;
-                if (currentFocus1 == currentFocus2 && _downPosition.Distance(new Microsoft.Maui.Graphics.Point(e.RawX, e.RawY)) <= Context.ToPixels(20.0) && !(DateTime.UtcNow - _downTime > TimeSpan.FromMilliseconds(200.0)))
-                {
-                    var location = new int[2];
-                    currentFocus1.GetLocationOnScreen(location);
-                    var num1 = e.RawX + currentFocus1.Left - location[0];
-                    var num2 = e.RawY + currentFocus1.Top - location[1];
-                    if (!new Rectangle(currentFocus1.Left, currentFocus1.Top, currentFocus1.Width, currentFocus1.Height).Contains((int)num1, (int)num2))
-                    {
-                        Context.HideKeyboard(currentFocus1);
-                        currentFocus1.ClearFocus();
-                    }
-                }
             }
-
-            if (_disposed)
-                return false;
-
-            var flag = base.DispatchTouchEvent(e);
-
-            return flag;
+            base.DispatchTouchEvent(e);
+            return true;
         }
 
 
