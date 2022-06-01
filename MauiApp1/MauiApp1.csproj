@@ -28,6 +28,72 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<AndroidSigningKeyStore>AswinPG.keystore</AndroidSigningKeyStore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-android|AnyCPU'">
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-maccatalyst|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-maccatalyst|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows10.0.19041.0|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows10.0.19041.0|AnyCPU'">
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>@aNJANA4</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>AswinPG</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>@aNJANA4</AndroidSigningKeyPass>
+	  <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
 	</PropertyGroup>
 
 	<ItemGroup>

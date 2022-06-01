@@ -19,7 +19,7 @@ using Android.Widget;
 
 namespace RGPopup.Pages;
 
-public class PopupPageHandler : ContentViewHandler
+public class PopupPageHandler : PageHandler
 {
     //private readonly RgGestureDetectorListener _gestureDetectorListener;
     //private readonly GestureDetector _gestureDetector;
@@ -28,7 +28,7 @@ public class PopupPageHandler : ContentViewHandler
     private Microsoft.Maui.Graphics.Point _downPosition;
     public bool _disposed;
 
-    public PopupPageHandler() : base(Mapper, CommandMapper)
+    public PopupPageHandler()
     {
 
         this.SetMauiContext(MauiApplication.Current.Application.Windows[0].Handler.MauiContext);
@@ -64,6 +64,7 @@ public class PopupPageHandler : ContentViewHandler
 
     protected override void ConnectHandler(ContentViewGroup platformView)
     {
+
         (platformView as PopupContentViewGroup).PopupHandler = this;
         base.ConnectHandler(platformView);
     }

@@ -11,7 +11,7 @@ namespace MauiApp1
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
 
@@ -21,8 +21,9 @@ namespace MauiApp1
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
-            PopupNavigation.Instance.PushAsync(new NewPage1());
+            //await CounterBtn.RelRotateTo(90,2000);
 
+            await PopupNavigation.Instance.PushAsync(new NewPage1());
         }
 
         protected override void LayoutChildren(double x, double y, double width, double height)
