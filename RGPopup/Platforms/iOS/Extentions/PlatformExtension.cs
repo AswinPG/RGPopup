@@ -55,12 +55,12 @@ internal static class PlatformExtension
 
     public static void UpdateSize(this PopupPlatformHandler handler)
     {
-        var currentElement = handler.CurrentElement;
+        var currentElement = handler.Handler.CurrentElement;
 
-        if (handler.PlatformView?.Superview?.Frame == null || currentElement == null)
+        if (handler.Handler.PlatformView?.Superview?.Frame == null || currentElement == null)
             return;
 
-        var superviewFrame = handler.PlatformView.Superview.Frame;
+        var superviewFrame = handler.Handler.PlatformView.Superview.Frame;
         var applicationFrame = UIScreen.MainScreen.ApplicationFrame;
 
         var systemPadding = new Thickness
@@ -71,7 +71,7 @@ internal static class PlatformExtension
             Bottom = applicationFrame.Bottom - applicationFrame.Height - applicationFrame.Top + handler.KeyboardBounds.Height
         };
 
-        if ((handler.VirtualView.Width != superviewFrame.Width && handler.VirtualView.Height != superviewFrame.Height)
+        if ((handler.Handler.VirtualView.Width != superviewFrame.Width && handler.Handler.VirtualView.Height != superviewFrame.Height)
             || currentElement.SystemPadding.Bottom != systemPadding.Bottom)
         {
             currentElement.BatchBegin();

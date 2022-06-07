@@ -185,8 +185,27 @@ public class PopupPage : ContentPage
 
     #region Size Methods
 
+
+    protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)
+    {
+        return base.OnMeasure(widthConstraint, heightConstraint);
+    }
+    protected override Size ArrangeOverride(Rect bounds)
+    {
+        return base.ArrangeOverride(bounds);
+    }
+    public override SizeRequest Measure(double widthConstraint, double heightConstraint, MeasureFlags flags = MeasureFlags.None)
+    {
+        return base.Measure(widthConstraint, heightConstraint, flags);
+    }
+    protected override Size MeasureOverride(double widthConstraint, double heightConstraint)
+    {
+        return base.MeasureOverride(widthConstraint, heightConstraint);
+    }
+
     protected override void LayoutChildren(double x, double y, double width, double height)
     {
+        //this.InvalidateMeasure();
         if (HasSystemPadding)
         {
             var systemPadding = SystemPadding;
